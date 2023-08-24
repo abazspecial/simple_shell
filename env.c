@@ -8,7 +8,7 @@
  */
 int _env(info_t *info)
 {
-	print_list_str(info->envv);
+	print_list_str(info->env);
 	return (0);
 }
 
@@ -22,7 +22,7 @@ int _env(info_t *info)
 char *_envget(info_t *info, const char *name)
 {
 	char *p;
-list_t *node = info->envv;
+list_t *node = info->env;
 	while (node)
 	{
 		p = starts_with(node->str, name);
@@ -47,7 +47,7 @@ int _setmyenv(info_t *info)
 		_eputs("Wrong number of arguments\n");
 		return (1);
 	}
-	if (_env(info, info->argv[1], info->argv[2]))
+	if (_setenv(info, info->argv[1], info->argv[2]))
 		return (0);
 	return (1);
 }
