@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
  * main - initialize the variables of the program
- * @argc: values received from the command line
+ * @argc: number of values received from the command line
  * @argv: values received from the command line
- * @env: values received from the command line
- * Return: 0 on succes.
+ * @env: number of values received from the command line
+ * Return: zero on succes.
  */
 int main(int argc, char *argv[], char *env[])
 {
@@ -16,7 +16,7 @@ int main(int argc, char *argv[], char *env[])
 	signal(SIGINT, handle_ctrl_c);
 
 	if (isatty(STDIN_FILENO) && isatty(STDOUT_FILENO) && argc == 1)
-	{
+	{/* We are in the terminal, interactive mode */
 		errno = 2;/*???????*/
 		prompt = PROMPT_MSG;
 	}
@@ -37,13 +37,13 @@ void handle_ctrl_c(int opr UNUSED)
 }
 
 /**
- * initialize_data - initialize the struct 
+ * inicialize_data - inicialize the struct with the info of the program
  * @data: pointer to the structure of data
  * @argv: array of arguments pased to the program execution
  * @env: environ pased to the program execution
  * @argc: number of values received from the command line
  */
-void initialize_data(data_of_program *data, int argc, char *argv[], char **env)
+void inicialize_data(data_of_program *data, int argc, char *argv[], char **env)
 {
 	int i = 0;
 
