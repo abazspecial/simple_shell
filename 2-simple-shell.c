@@ -7,16 +7,16 @@
 /**
 
  * checkMode - returns true if shell is interactive mode
- * @struct: address of a structure
+ * @s: address of a structure
  * Return: 1 if interactive mode, 0 otherwise
 
  */
 
-int checkMode(struct_t *struct)
+int checkMode(s_t *s)
 
 {
 
-        return (isatty(STDIN_FILENO) && struct->readfd <= 2);
+        return (isatty(STDIN_FILENO) && s->readfd <= 2);
 
 }
 

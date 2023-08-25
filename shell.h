@@ -163,7 +163,7 @@ void *_realloc(void *, unsigned int, unsigned int);
 int bfree(void **);
 
 /* 2-simple-shell.c */
-int interactive(struct_t *);
+int checkMode(s_t *);
 int isDelimeter(char, char *);
 int is_Alpha(int);
 int string_int(char *);
