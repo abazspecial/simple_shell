@@ -1,4 +1,6 @@
 
+
+
 #include "shell.h"
 
 
@@ -21,7 +23,7 @@ int checkMode(struct_t *struct)
 
 /**
 
- * is_delim - checks if character is a delimeter or not
+ * isDelimeter - checks if character is a delimeter or not
  * @x: char to check
  * @d: is a delimeter string
 
@@ -29,7 +31,7 @@ int checkMode(struct_t *struct)
 
  */
 
-int is_delim(char x, char *d)
+int isDelimeter(char x, char *d)
 
 {
 
@@ -46,13 +48,13 @@ int is_delim(char x, char *d)
 
 /**
 
- * _isalpha - checks for an alphabetic character
+ * is_Alpha - checks for an alphabetic character
  * @x: The character input
  * Return: 1 if x is alphabetic
  */
 
 
-int _isalpha(int x)
+int is_Alpha(int x)
 
 {
 
@@ -69,13 +71,13 @@ int _isalpha(int x)
 
 /**
 
- * _atoi - converts a string to an integer
+ * string_int  - converts a string to an integer
  * @p: the string to be converted
  * Return: 0 if no numbers in string, convert
  */
 
 
-int _atoi(char *p)
+int string_int (char *p)
 
 {
 

@@ -162,11 +162,11 @@ void *_realloc(void *, unsigned int, unsigned int);
 /* toem_memory.c */
 int bfree(void **);
 
-/* toem_atoi.c */
-int interactive(info_t *);
-int is_delim(char, char *);
-int _isalpha(int);
-int _atoi(char *);
+/* 2-simple-shell.c */
+int interactive(struct_t *);
+int isDelimeter(char, char *);
+int is_Alpha(int);
+int string_int(char *);
 
 /* toem_errors1.c */
 int _erratoi(char *);
